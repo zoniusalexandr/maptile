@@ -174,6 +174,7 @@ program define maptile, rclass
 	* Restrict sample
 	if `"`if'`in'"'!="" {
 		marksample touse
+		qui keep if `touse'
 		qui replace `var'=. if !`touse'
 	}
 
